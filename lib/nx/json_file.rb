@@ -11,7 +11,7 @@ module Nx
     end
 
     def load(filename = nil)
-      self.json = JSON.parse File.read(filname || self.filename)
+      self.json = JSON.parse File.read(filename || self.filename)
     end
 
     def update(path, value)
