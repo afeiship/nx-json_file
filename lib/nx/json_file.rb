@@ -7,11 +7,11 @@ module Nx
 
     def initialize(filname)
       self.filename = filname
-      self.load
+      self.load filename
     end
 
-    def load
-      self.json = JSON.parse File.read(self.filename)
+    def load(filename = nil)
+      self.json = JSON.parse File.read(filname || self.filename)
     end
 
     def update(path, value)
