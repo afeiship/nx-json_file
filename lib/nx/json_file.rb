@@ -1,3 +1,6 @@
+require "nx"
+require "json"
+
 module JsonFile
   def initialize(filname)
     @filename = filname
