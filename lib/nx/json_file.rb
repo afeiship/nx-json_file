@@ -3,21 +3,23 @@ require "json"
 
 module Nx
   class JsonFile
+    attr_accessor :filename, :json
+
     def initialize(filname)
-      @filename = filname
-      @json = nil
+      self.filename = filname
+      self.load self.filename
     end
 
     def load
-      @json = JSON.parse File.read(@filename)
+      self.json = JSON.parse File.read(@filename)
     end
 
     def update(path, value)
-      @json.set(path, value)
+      self.json.set(path, value)
     end
 
     def save(target)
-      File.write(target, JSON.pretty_generate(@json))
+      File.write(target, JSON.pretty_generate(self.json))
     end
   end
 end
