@@ -5,8 +5,8 @@ module Nx
   class JsonFile
     attr_accessor :filename, :json
 
-    def initialize(filname)
-      self.filename = filname
+    def initialize(filename)
+      self.filename = filename
       self.load filename
     end
 
