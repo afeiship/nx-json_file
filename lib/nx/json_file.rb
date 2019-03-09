@@ -25,6 +25,7 @@ module Nx
     end
 
     def save(target)
+      target ||= self.filename
       File.write(target, JSON.pretty_generate(self.json))
     end
   end
