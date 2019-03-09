@@ -3,7 +3,7 @@ require "nx"
 require "json"
 
 module Nx
-  class JsonFile
+  module JsonFile
     def initialize(filname)
       @filename = filname
       @json = nil
