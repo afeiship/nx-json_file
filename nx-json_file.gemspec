@@ -5,7 +5,7 @@ require "templates/version"
 
 Gem::Specification.new do |spec|
   spec.name = "nx-json_file"
-  spec.version = Nx::JsonFile::VERSION
+  spec.version = Nx::VERSION
   spec.authors = ["afeiship"]
   spec.email = ["1290657123@qq.com"]
 
