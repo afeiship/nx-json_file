@@ -18,6 +18,12 @@ module Nx
       self.json.set(path, value)
     end
 
+    def updates(hash)
+      hash.each do |key, value|
+        self.update(key, value)
+      end
+    end
+
     def save(target)
       File.write(target, JSON.pretty_generate(self.json))
     end
