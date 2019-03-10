@@ -5,7 +5,6 @@
 
 ```rb
 require "bundler/setup"
-require "nx"
 require "nx/json_file"
 ```
 
